@@ -1144,6 +1144,18 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
             <label class="choice"><input type="checkbox" name="cats" value="Унітази та інсталяції"><span class="choice__mark choice__mark--box"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span class="choice__text"><span class="choice__title">Унітази та інсталяції</span></span></label>
           </div>
           <p class="field__error" id="err-cats" style="display:none">Оберіть хоча б один напрям.</p>
+
+          <div class="field" style="margin-top:var(--space-5)">
+            <span class="field__label">Орієнтовний бюджет</span>
+            <span class="field__help" style="margin-bottom:var(--space-2)">Необовʼязково. Допомагає одразу показати те, що вам підходить, і не витрачати ваш час.</span>
+            <div class="choice-grid choice-grid--2">
+              <label class="choice"><input type="radio" name="budget" value="до 10 000 грн"><span class="choice__mark choice__mark--dot"></span><span class="choice__text"><span class="choice__title">до 10 000 грн</span><span class="choice__desc">заміна змішувача, унітаза, дрібний ремонт</span></span></label>
+              <label class="choice"><input type="radio" name="budget" value="10 000 – 30 000 грн"><span class="choice__mark choice__mark--dot"></span><span class="choice__text"><span class="choice__title">10 000 – 30 000 грн</span><span class="choice__desc">оновити частину ванної кімнати</span></span></label>
+              <label class="choice"><input type="radio" name="budget" value="30 000 – 70 000 грн"><span class="choice__mark choice__mark--dot"></span><span class="choice__text"><span class="choice__title">30 000 – 70 000 грн</span><span class="choice__desc">ванна під ключ або опалення квартири</span></span></label>
+              <label class="choice"><input type="radio" name="budget" value="понад 70 000 грн"><span class="choice__mark choice__mark--dot"></span><span class="choice__text"><span class="choice__title">понад 70 000 грн</span><span class="choice__desc">будинок, опалення та сантехніка разом</span></span></label>
+              <label class="choice"><input type="radio" name="budget" value="Ще не визначились"><span class="choice__mark choice__mark--dot"></span><span class="choice__text"><span class="choice__title">Ще не визначились</span><span class="choice__desc">підкажемо, з чого виходити</span></span></label>
+            </div>
+          </div>
         </fieldset>
 
         <!-- step 3 -->
@@ -1744,6 +1756,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
       type: 'estimate',
       object: (calcForm.querySelector('input[name="object"]:checked') || {}).value || '',
       categories: cats,
+      budget: (calcForm.querySelector('input[name="budget"]:checked') || {}).value || '',
       name: nameEl.value.trim(),
       phone: phoneEl.value.trim(),
       showroom: $('#calc-showroom').value,
@@ -1758,6 +1771,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
       var dl = $('#calc-summary'); dl.textContent = '';
       row(dl, 'Тип об’єкта', payload.object);
       row(dl, 'Напрями', payload.categories.join(', '));
+      if(payload.budget) row(dl, 'Бюджет', payload.budget);
       row(dl, 'Контакт', payload.name + ' · ' + payload.phone);
       row(dl, 'Шоурум', payload.showroom);
 

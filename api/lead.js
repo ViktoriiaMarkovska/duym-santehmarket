@@ -28,6 +28,7 @@ function buildMessage(b) {
     if (b.object) lines.push('Обʼєкт: <b>' + esc(b.object) + '</b>');
     const cats = Array.isArray(b.categories) ? b.categories.map(esc).join(', ') : '';
     if (cats) lines.push('Напрями: ' + cats);
+    if (clean(b.budget)) lines.push('Бюджет: <b>' + esc(b.budget) + '</b>');
   } else if (b.subject) {
     lines.push('Тема: <b>' + esc(b.subject) + '</b>');
   }
