@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Сантехмаркет «Дюйм» — сантехніка, опалення та інтер'єрні рішення в Івано-Франківську</title>
-<meta name="description" content="Сантехніка, опалення та меблі для ванної в Івано-Франківську. Підберемо під ваші розміри, привеземо і встановимо. Шість магазинів, є варіанти під будь-який бюджет.">
+<meta name="description" content="Магазин-конструктор «Дюйм»: підбираємо сантехніку, меблі та опалення під ваш проєкт і бюджет. Шість локацій в Івано-Франківську, замір на об'єкті та професійний монтаж.">
 <meta name="theme-color" content="#21262A">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:title" content="Сантехмаркет «Дюйм» — точність у кожній деталі">
-<meta property="og:description" content="Сантехніка, опалення та меблі для ванної в Івано-Франківську. Підберемо, привеземо, встановимо.">
+<meta property="og:description" content="Магазин-конструктор сантехніки, опалення та інтер'єрних рішень в Івано-Франківську. Індивідуальний підбір під ваш проєкт.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232C5978'/%3E%3Cg fill='none' stroke='%23F4F1EC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' transform='translate(4 4)'%3E%3Cpath d='M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0l-4.6-4.6a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4Z'/%3E%3Cpath d='m7.5 10.5 2 2'/%3E%3Cpath d='m10.5 7.5 2 2'/%3E%3Cpath d='m13.5 4.5 2 2'/%3E%3Cpath d='m4.5 13.5 2 2'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
 --surface-base:var(--stone-100);--surface-page:var(--stone-100);--surface-card:var(--white);
 --surface-sand:var(--stone-200);--surface-sunken:var(--stone-200);--surface-dark:var(--ink-900);
 --surface-accent:var(--blue-600);
---text-primary:var(--ink-900);--text-secondary:var(--stone-700);--text-muted:var(--stone-600);
+--text-primary:var(--ink-900);--text-secondary:var(--stone-600);--text-muted:var(--stone-500);
 --text-on-accent:var(--white);--text-on-dark:var(--stone-100);
 --text-link:var(--blue-600);--text-link-hover:var(--blue-700);
 --border-default:var(--stone-300);--border-strong:var(--stone-400);--border-on-dark:rgba(244,241,236,.18);
@@ -41,7 +41,7 @@
 --font-sans:'Commissioner',-apple-system,'Segoe UI',Roboto,sans-serif;
 --text-display:clamp(40px,5vw,64px);--lh-display:1.05;--ls-display:-0.01em;
 --text-h1:40px;--lh-h1:1.12;--text-h2:32px;--lh-h2:1.16;--text-h3:24px;--lh-h3:1.25;--text-h4:20px;--lh-h4:1.3;
---text-body-lg:19px;--lh-body-lg:1.6;--text-body:17px;--lh-body:1.65;--text-body-sm:15px;--lh-body-sm:1.6;
+--text-body-lg:18px;--lh-body-lg:1.55;--text-body:16px;--lh-body:1.6;--text-body-sm:14px;--lh-body-sm:1.55;
 --text-caption:13px;--lh-caption:1.4;--ls-caption:.01em;--text-eyebrow:13px;--ls-eyebrow:.14em;
 --fw-regular:400;--fw-medium:500;--fw-semibold:600;--fw-bold:700;--fw-serif-bold:700;--fw-serif-black:800;
 /* space */
@@ -114,11 +114,6 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 .btn--on-dark{background:transparent;color:var(--stone-100);border-color:var(--border-on-dark)}
 .btn--on-dark:hover{background:rgba(244,241,236,.08);border-color:rgba(244,241,236,.38);color:var(--white)}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
-@media (max-width:900px){
-  .btn{min-height:50px}
-  .btn--sm{min-height:44px}
-  .icon-btn{width:44px;height:44px}
-}
 .btn--block{width:100%}
 
 /* ===================== Badge / Tag (components/core) ===================== */
@@ -571,34 +566,6 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 .ribbon__link svg{width:15px;height:15px}
 
 </style>
-<style>
-.open-now{display:inline-flex;align-items:center;gap:7px;font-weight:var(--fw-medium);color:var(--stone-100)}
-.open-now__dot{width:8px;height:8px;border-radius:var(--radius-full);background:var(--stone-500);flex:none}
-.open-now.is-open .open-now__dot{background:var(--success-500);
-  box-shadow:0 0 0 3px rgba(75,123,74,.25)}
-.open-now.is-open{color:var(--stone-100)}
-.open-now.is-closed{color:var(--stone-400)}
-.hero__phone{font-variant-numeric:tabular-nums}
-.hero__more{display:inline-flex;align-items:center;gap:8px;color:var(--blue-200);font-size:var(--text-body);
-  font-weight:var(--fw-medium);margin-top:var(--space-2)}
-.hero__more:hover{color:var(--white)}
-</style>
-<style>
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6);counter-reset:how}
-.how__item{background:var(--surface-card);border:1px solid var(--border-default);border-radius:var(--radius-md);
-  padding:var(--space-6);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-3)}
-.how__num{width:46px;height:46px;flex:none;border-radius:var(--radius-full);background:var(--accent);
-  color:var(--white);display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-serif);font-size:23px;font-weight:var(--fw-serif-bold);line-height:1}
-.how__item h3{font-size:var(--text-h4);line-height:var(--lh-h4)}
-.how__item p{font-size:var(--text-body);line-height:1.6;color:var(--text-secondary)}
-@media (max-width:900px){ .how{grid-template-columns:1fr;gap:var(--space-4)} }
-
-/* швидка форма: тільки телефон */
-.dialog.is-quick #lf-name,
-.dialog.is-quick #lf-showroom,
-.dialog.is-quick #lf-note-field{display:none}
-</style>
 </head>
 <body>
 
@@ -635,12 +602,12 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 <div class="topbar">
   <div class="container topbar__inner">
     <div class="topbar__group">
-      <span class="rating"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2"><use href="#i-ruler"/></svg> Сантехніка <span style="color:var(--stone-400);font-weight:400">· опалення · меблі для ванної</span></span>
+      <span class="rating"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2"><use href="#i-ruler"/></svg> Магазин-конструктор <span style="color:var(--stone-400);font-weight:400">— підбір під проєкт</span></span>
       <a class="topbar__chip" href="https://maps.google.com/?q=вул.+Володимира+Івасюка,+10,+Івано-Франківськ" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg> вул. В. Івасюка, 10</a>
       <a class="topbar__chip" href="https://maps.google.com/?q=%D0%B2%D1%83%D0%BB.%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0%20%D0%A1%D0%BE%D1%80%D0%BE%D1%85%D1%82%D0%B5%D1%8F%2C%2041%D0%B0%2C%20%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg> вул. Сорохтея, 41а</a>
     </div>
     <div class="topbar__group">
-      <span class="open-now" id="open-now"><span class="open-now__dot"></span><span id="open-now-text">Пн–Пт 09:00–18:00 · Сб до 15:00</span></span>
+      <span class="topbar__chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg> Пн–Пт 09:00–18:00 · Сб до 15:00</span>
       <a href="tel:+380501537770">+380 50 153 77 70</a>
       <a href="tel:+380678538604">+380 67 853 86 04</a>
     </div>
@@ -694,50 +661,17 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
   <div class="container hero__inner">
     <span class="eyebrow">Сантехніка · Опалення · Інтер'єр</span>
     <h1>Головний простір сантехніки та інтер'єрних рішень в Івано-Франківську</h1>
-    <p class="hero__sub">Підберемо сантехніку, меблі та опалення під вашу ванну кімнату — привеземо і встановимо. Є варіанти під будь-який бюджет: від простих і надійних до преміальних.</p>
+    <p class="hero__sub">Магазин-конструктор: допомагаємо підібрати сантехніку, меблі та опалення під ваш індивідуальний бюджет і дизайн-проєкт без зайвих клопотів.</p>
     <div class="hero__cta">
-      <a class="btn btn--primary btn--lg hero__phone" href="tel:+380501537770">
-        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
-        Зателефонувати: 050 153 77 70
+      <button class="btn btn--primary btn--lg" data-lead="Підбір сантехніки під проєкт">Підібрати сантехніку під проєкт</button>
+      <a class="btn btn--on-dark btn--lg" href="#catalog">Переглянути категорії
+        <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
-      <button class="btn btn--on-dark btn--lg" data-lead-quick>Передзвоніть мені</button>
     </div>
-    <a class="hero__more" href="#catalog">Переглянути категорії
-      <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
-    </a>
     <div class="hero__badges">
       <span class="badge badge--on-dark"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ruler"/></svg> Замір на об'єкті</span>
       <span class="badge badge--on-dark"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg> 6 локацій у Франківську</span>
       <span class="badge badge--on-dark"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wrench"/></svg> Професійний монтаж</span>
-      <span class="badge badge--on-dark"><svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg> Під будь-який бюджет</span>
-    </div>
-  </div>
-</section>
-
-<!-- ========== Як це працює ========== -->
-<section class="section" id="how">
-  <div class="container">
-    <div class="section-head" style="text-align:center;align-items:center;margin-left:auto;margin-right:auto">
-      <span class="eyebrow">Як це працює</span>
-      <h2>Три кроки — і у вас усе готово</h2>
-      <p class="lead">Вам не треба нічого знати наперед. Розберемося разом.</p>
-    </div>
-    <div class="how">
-      <article class="how__item">
-        <span class="how__num">1</span>
-        <h3>Ви телефонуєте</h3>
-        <p>Або залишаєте номер, і ми передзвонюємо самі. Розкажіть своїми словами, що потрібно — якщо не знаєте, підкажемо.</p>
-      </article>
-      <article class="how__item">
-        <span class="how__num">2</span>
-        <h3>Приїжджаємо і міряємо</h3>
-        <p>Інженер дивиться приміщення, перевіряє розміри й підключення. Після цього називаємо ціну — без несподіванок потім.</p>
-      </article>
-      <article class="how__item">
-        <span class="how__num">3</span>
-        <h3>Привозимо і встановлюємо</h3>
-        <p>Доставляємо на місце і монтуємо. Вам не треба окремо шукати майстра, вантажівку чи магазин.</p>
-      </article>
     </div>
   </div>
 </section>
@@ -747,33 +681,33 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Як ми працюємо</span>
-      <h2>Чому люди приходять до нас</h2>
-      <p class="lead">Ми не просто продаємо з полиці. Ми дивимось, що саме вам підійде, і збираємо все так, щоб одне пасувало до іншого.</p>
+      <h2>Чому магазин-конструктор?</h2>
+      <p class="lead">Обладнання підбирається під конкретний об'єкт, а не з полиці. Ви отримуєте комплект, у якому всі елементи узгоджені між собою — за розмірами, тиском і стилем.</p>
     </div>
     <div class="grid-4">
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ruler"/></svg></span>
         <span class="feature__num">01</span>
-        <h4>Підберемо під ваші розміри</h4>
-        <p>Виміряємо вашу ванну чи котельню й підберемо те, що стане на місце. Перевіримо все до покупки, а не після.</p>
+        <h4>Індивідуальний підбір</h4>
+        <p>Підбираємо обладнання під ваші технічні креслення та розміри приміщення. Габарити, підключення та тиск перевіряємо до замовлення.</p>
       </article>
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grid"/></svg></span>
         <span class="feature__num">02</span>
-        <h4>Усе в одному місці</h4>
-        <p>Труби, котли, змішувачі, унітази, меблі для ванної. Не треба їздити по п'яти магазинах.</p>
+        <h4>Комплексні рішення</h4>
+        <p>Від труб і котлів опалення до дизайнерських змішувачів і меблів. Один підрядник на весь інженерний комплект.</p>
       </article>
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg></span>
         <span class="feature__num">03</span>
-        <h4>Європейські бренди з гарантією</h4>
-        <p>Працюємо з відомими виробниками. На кожен товар — гарантія й документи.</p>
+        <h4>Перевірена якість</h4>
+        <p>Офіційна дистрибуція провідних європейських брендів. Гарантія виробника та підтверджені сертифікати на кожну позицію.</p>
       </article>
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-truck"/></svg></span>
         <span class="feature__num">04</span>
-        <h4>Привеземо і встановимо</h4>
-        <p>Порадимо, привеземо додому і змонтуємо. Шукати майстра окремо не доведеться.</p>
+        <h4>Повний сервіс</h4>
+        <p>Консультація інженера, доставка на об'єкт і професійний монтаж. Ви не шукаєте виконавців окремо на кожен етап.</p>
       </article>
     </div>
   </div>
@@ -782,7 +716,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 <!-- ========== Бренди ========== -->
 <section class="brands" id="brands">
   <div class="container brands__row">
-    <span class="brands__label">Бренди, з якими працюємо<small>повний перелік — у магазині</small></span>
+    <span class="brands__label">Офіційна дистрибуція<small>повний перелік — у шоурумі</small></span>
     <div class="marquee" aria-label="Виробники, з якими працюємо">
       <div class="marquee__track" data-marquee>
         <!-- бренди: дописувати сюди, решту скрипт розмножить сам -->
@@ -801,8 +735,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
     <div class="catalog__head section-head" style="max-width:none;flex-direction:row;align-items:flex-end">
       <div style="display:flex;flex-direction:column;gap:var(--space-3);max-width:640px">
         <span class="eyebrow">Каталог рішень</span>
-        <h2>Що вам потрібно?</h2>
-        <p class="lead">Оберіть напрям — покажемо, що є, і скажемо ціну. Є варіанти і недорогі, і преміальні.</p>
+        <h2>Оберіть напрям — решту підберемо разом</h2>
+        <p class="lead">Це орієнтири для проєкту, а не складські залишки. Наявність, конфігурацію та ціну підтверджує інженер після короткої розмови.</p>
       </div>
     </div>
 
@@ -823,13 +757,13 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </div>
         <div class="card__body">
           <h3>Ванни та душові комплекси</h3>
-          <p>Ванни й душові кабіни різних розмірів. Підберемо те, що стане у вашу ванну кімнату.</p>
-          <div class="tag-row"><span class="tag">розміри під вашу нішу</span><span class="tag">акрилові та сталеві</span><span class="tag">злив у підлозі</span></div>
+          <p>Акрилові, сталеві та литі ванни, душові кабіни й трапи під плитку. Підбираємо за розміром ніші та схемою зливу.</p>
+          <div class="tag-row"><span class="tag">150–180 см</span><span class="tag">акрил · сталь</span><span class="tag">трап під плитку</span></div>
         </div>
         <div class="card__footer">
           <div class="pcard__actions">
-            <button class="btn btn--primary btn--md btn--block" data-lead="Ванни та душові комплекси">Дізнатися ціну</button>
-            <button class="btn btn--ghost btn--sm btn--block" data-lead="Ванни та душові — порада щодо вибору">Порадьте, що вибрати</button>
+            <button class="btn btn--primary btn--md btn--block" data-lead="Ванни та душові комплекси">Запитати наявність</button>
+            <button class="btn btn--ghost btn--sm btn--block" data-lead="Ванни та душові комплекси — конфігурація">Підібрати конфігурацію</button>
           </div>
         </div>
       </article>
@@ -841,12 +775,12 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </div>
         <div class="card__body">
           <h3>Підвісні унітази та інсталяції</h3>
-          <p>Підвісні унітази разом з інсталяцією. Порахуємо, чи витримає стіна, і на якій висоті ставити.</p>
-          <div class="tag-row"><span class="tag">кришка не грюкає</span><span class="tag">без обідка — легше мити</span><span class="tag">висота під вас</span></div>
+          <p>Рами, бачки та клавіші змиву з перевіреним ресурсом. Розраховуємо навантаження на стіну й висоту виводу.</p>
+          <div class="tag-row"><span class="tag">soft-close</span><span class="tag">rimless</span><span class="tag">h 820–1120 мм</span></div>
         </div>
         <div class="card__footer">
           <div class="pcard__actions">
-            <button class="btn btn--primary btn--md btn--block" data-lead="Підвісні унітази та інсталяції">Дізнатися ціну</button>
+            <button class="btn btn--primary btn--md btn--block" data-lead="Підвісні унітази та інсталяції">Запитати наявність</button>
           </div>
         </div>
       </article>
@@ -858,12 +792,12 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </div>
         <div class="card__body">
           <h3>Змішувачі, термостати та раковини</h3>
-          <p>Змішувачі для кухні й ванної, душові стійки, раковини. Від простих до дизайнерських.</p>
-          <div class="tag-row"><span class="tag">не капає роками</span><span class="tag">вода однакової температури</span><span class="tag">латунь, не пластик</span></div>
+          <p>Кухонні та ванні змішувачі, термостатичні групи для душу, накладні й вбудовані раковини.</p>
+          <div class="tag-row"><span class="tag">керамічний картридж</span><span class="tag">термостат 38 °C</span><span class="tag">латунь</span></div>
         </div>
         <div class="card__footer">
           <div class="pcard__actions">
-            <button class="btn btn--primary btn--md btn--block" data-lead="Змішувачі, термостати та раковини">Дізнатися ціну</button>
+            <button class="btn btn--primary btn--md btn--block" data-lead="Змішувачі, термостати та раковини">Запитати наявність</button>
           </div>
         </div>
       </article>
@@ -875,12 +809,12 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </div>
         <div class="card__body">
           <h3>Дизайнерські меблі для ванної</h3>
-          <p>Тумби, пенали та дзеркала, які не бояться вологи. Підженемо розміри під вашу ванну.</p>
-          <div class="tag-row"><span class="tag">не боїться вологи</span><span class="tag">зробимо під ваш розмір</span><span class="tag">з підсвіткою</span></div>
+          <p>Тумби, пенали та дзеркала з вологостійких матеріалів. Розміри узгоджуємо з планом розводки.</p>
+          <div class="tag-row"><span class="tag">вологостійкий МДФ</span><span class="tag">під замовлення</span><span class="tag">LED-підсвітка</span></div>
         </div>
         <div class="card__footer">
           <div class="pcard__actions">
-            <button class="btn btn--primary btn--md btn--block" data-lead="Дизайнерські меблі для ванної">Дізнатися ціну</button>
+            <button class="btn btn--primary btn--md btn--block" data-lead="Дизайнерські меблі для ванної">Запитати наявність</button>
           </div>
         </div>
       </article>
@@ -892,13 +826,13 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </div>
         <div class="card__body">
           <h3>Енергоефективні котли та системи опалення</h3>
-          <p>Котли, радіатори, тепла підлога. Порахуємо, якої потужності треба саме вам.</p>
-          <div class="tag-row"><span class="tag">на будинок і на квартиру</span><span class="tag">економні</span><span class="tag">тепла підлога</span></div>
+          <p>Настінні й підлогові котли, радіатори, тепла підлога. Потужність рахуємо за площею та тепловтратами.</p>
+          <div class="tag-row"><span class="tag">24–35 кВт</span><span class="tag">конденсаційні</span><span class="tag">тепла підлога</span></div>
         </div>
         <div class="card__footer">
           <div class="pcard__actions">
-            <button class="btn btn--primary btn--md btn--block" data-lead="Котли та системи опалення">Дізнатися ціну</button>
-            <button class="btn btn--ghost btn--sm btn--block" data-lead="Опалення — порада щодо вибору">Порадьте, що вибрати</button>
+            <button class="btn btn--primary btn--md btn--block" data-lead="Котли та системи опалення">Запитати наявність</button>
+            <button class="btn btn--ghost btn--sm btn--block" data-lead="Система опалення — розрахунок конфігурації">Підібрати конфігурацію</button>
           </div>
         </div>
       </article>
@@ -910,12 +844,12 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </div>
         <div class="card__body">
           <h3>Труби, фітинги та системи водопостачання</h3>
-          <p>Труби, крани, фітинги — усе, щоб вода йшла куди треба й ніде не текла.</p>
-          <div class="tag-row"><span class="tag">усі розміри</span><span class="tag">під гарячу воду</span><span class="tag">витримують окріп</span></div>
+          <p>Поліпропілен, метал-пластик, колектори та запірна арматура. Комплектуємо за схемою розводки об'єкта.</p>
+          <div class="tag-row"><span class="tag">DN16–DN63</span><span class="tag">PN20</span><span class="tag">до 95 °C</span></div>
         </div>
         <div class="card__footer">
           <div class="pcard__actions">
-            <button class="btn btn--primary btn--md btn--block" data-lead="Труби, фітинги та водопостачання">Дізнатися ціну</button>
+            <button class="btn btn--primary btn--md btn--block" data-lead="Труби, фітинги та водопостачання">Запитати наявність</button>
           </div>
         </div>
       </article>
@@ -924,7 +858,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 
     <p class="catalog__note">
       <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg>
-      <span>Ціну називаємо після короткої розмови — бо вона залежить від розмірів і того, що саме вам потрібно. Напишіть або зателефонуйте, відповімо того ж дня.</span>
+      <span>Ми не тримаємо онлайн-кошик: комплектація залежить від об'єкта. Надішліть запит — інженер підтвердить наявність, ціну та строк постачання протягом робочого дня.</span>
     </p>
   </div>
 </section>
@@ -944,29 +878,29 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Послуги монтажу</span>
-      <h2>Не тільки продаємо — ще й ставимо</h2>
-      <p class="lead">Монтують ті самі люди, які працюють із цим обладнанням щодня. Гарантія і на техніку, і на роботу.</p>
+      <h2>Від заміру до запуску системи</h2>
+      <p class="lead">Монтаж виконують бригади, які працюють із нашим обладнанням щодня. Гарантія поширюється і на техніку, і на роботи.</p>
     </div>
     <div class="grid-4">
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ruler"/></svg></span>
         <h4>Замір на об'єкті</h4>
-        <p>Приїдемо, подивимось і поміряємо. Тільки після цього називаємо ціну.</p>
+        <p>Інженер перевіряє розводку, тиск і габарити перед тим, як формувати кошторис.</p>
       </article>
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-waves"/></svg></span>
-        <h4>Труби й опалення</h4>
-        <p>Прокладемо труби, поставимо радіатори чи теплу підлогу і перевіримо, що ніде не тече.</p>
+        <h4>Розводка та опалення</h4>
+        <p>Монтаж труб, колекторів, радіаторів і теплої підлоги з опресуванням системи.</p>
       </article>
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wrench"/></svg></span>
         <h4>Встановлення сантехніки</h4>
-        <p>Ванни, душові, унітази, змішувачі, меблі. Ставимо так, щоб потім не довелося нічого переробляти.</p>
+        <p>Інсталяції, ванни, душові, змішувачі та меблі — під ключ, без переробок після плитки.</p>
       </article>
       <article class="feature">
         <span class="feature__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg></span>
-        <h4>Запустимо і покажемо</h4>
-        <p>Запустимо котел і покажемо, як ним користуватися. Далі обслуговуємо.</p>
+        <h4>Запуск і гарантія</h4>
+        <p>Пусконалагодження котла, інструктаж і сервісне обслуговування після здачі.</p>
       </article>
     </div>
     <div style="margin-top:var(--space-8);display:flex;gap:var(--space-3);flex-wrap:wrap">
@@ -981,8 +915,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
   <div class="container container--narrow">
     <div class="section-head" style="text-align:center;align-items:center;margin-left:auto;margin-right:auto">
       <span class="eyebrow">Розрахунок кошторису</span>
-      <h2>Порахуємо, скільки це коштує</h2>
-      <p class="lead">Дайте відповідь на три прості питання — і ми порахуємо, у скільки це вам обійдеться.</p>
+      <h2>Три кроки до попереднього кошторису</h2>
+      <p class="lead">Опишіть об'єкт і напрями робіт. Інженер підготує розрахунок і зателефонує у зручний час.</p>
     </div>
 
     <div class="calc">
@@ -1059,7 +993,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
           <button type="button" class="btn btn--primary btn--md" id="calc-next">Далі
             <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
           </button>
-          <button type="submit" class="btn btn--primary btn--md" id="calc-submit" style="display:none">Дізнатися ціну — це безкоштовно</button>
+          <button type="submit" class="btn btn--primary btn--md" id="calc-submit" style="display:none">Отримати безкоштовний розрахунок кошторису</button>
         </div>
       </form>
 
@@ -1239,7 +1173,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
         </ul>
       </div>
     </div>
-    <p class="footer__legal" style="margin-top:var(--space-10)">Зображення категорій наведені як орієнтир для проєкту та можуть відрізнятися від фактичних моделей. Точну ціну й строки менеджер називає після того, як ви домовитесь, що саме потрібно. Сайт не є публічною офертою.</p>
+    <p class="footer__legal" style="margin-top:var(--space-10)">Зображення категорій наведені як орієнтир для проєкту та можуть відрізнятися від фактичних моделей. Ціни, наявність і строки постачання підтверджує менеджер після узгодження конфігурації. Сайт не є публічною офертою.</p>
     <div class="footer__bottom">
       <span>© Сантехмаркет «Дюйм» — Точність у кожній деталі.</span>
       <span>м. Івано-Франківськ, Україна</span>
@@ -1262,7 +1196,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 
     <form id="lead-form" novalidate>
       <div class="dialog__body">
-        <p id="lead-intro" style="font-size:var(--text-body-sm);color:var(--text-secondary)">Залиште контакти — інженер зателефонує, уточнить деталі та підтвердить наявність і ціну.</p>
+        <p style="font-size:var(--text-body-sm);color:var(--text-secondary)">Залиште контакти — інженер зателефонує, уточнить деталі об'єкта та підтвердить наявність і ціну.</p>
         <div class="field" id="lf-name">
           <label class="field__label" for="lead-name">Ім'я <span class="req">*</span></label>
           <input class="input" id="lead-name" name="name" type="text" placeholder="Як до вас звертатися" autocomplete="name">
@@ -1273,7 +1207,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
           <input class="input" id="lead-phone" name="phone" type="tel" inputmode="tel" placeholder="+380 __ ___ __ __" autocomplete="tel">
           <span class="field__error">Вкажіть номер у форматі +380 XX XXX XX XX.</span>
         </div>
-        <div class="field" id="lf-showroom">
+        <div class="field">
           <label class="field__label" for="lead-showroom">Зручний шоурум</label>
           <select class="select" id="lead-showroom" name="showroom">
             <option value="вул. Володимира Івасюка, 10">вул. Володимира Івасюка, 10 — головний шоурум</option>
@@ -1285,7 +1219,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
             <option value="Без візиту — телефонна консультація">Без візиту — телефонна консультація</option>
           </select>
         </div>
-        <div class="field" id="lf-note-field">
+        <div class="field">
           <label class="field__label" for="lead-note">Коментар</label>
           <textarea class="textarea" id="lead-note" name="note" placeholder="Розміри, стан розводки, бажані бренди, строки"></textarea>
           <span class="field__help">Необов'язково. Допомагає підготувати точнішу пропозицію.</span>
@@ -1390,50 +1324,6 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
     });
   });
 
-  /* ===================== відчинено чи ні ===================== */
-  (function(){
-    var box = $('#open-now'), label = $('#open-now-text');
-    if(!box || !label) return;
-    var DAYS = ['неділю','понеділок','вівторок','середу','четвер','пʼятницю','суботу'];
-    // Пн–Пт 9–18, Сб 9–15, Нд вихідний
-    var HOURS = {1:[9,18],2:[9,18],3:[9,18],4:[9,18],5:[9,18],6:[9,15],0:null};
-
-    function kyiv(){
-      var p = {};
-      new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Kyiv',weekday:'short',hour:'2-digit',
-        minute:'2-digit',hour12:false}).formatToParts(new Date()).forEach(function(x){ p[x.type]=x.value; });
-      var map = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
-      return {day: map[p.weekday], mins: Number(p.hour)*60 + Number(p.minute)};
-    }
-    function nextOpen(day){
-      for(var i=1;i<=7;i++){
-        var d=(day+i)%7;
-        if(HOURS[d]) return {day:d, hour:HOURS[d][0], tomorrow:i===1};
-      }
-      return null;
-    }
-    function render(){
-      var t = kyiv(), today = HOURS[t.day];
-      var open = today && t.mins >= today[0]*60 && t.mins < today[1]*60;
-      if(open){
-        box.className = 'open-now is-open';
-        label.textContent = 'Зараз відчинено · до ' + today[1] + ':00';
-      } else {
-        box.className = 'open-now is-closed';
-        if(today && t.mins < today[0]*60){
-          label.textContent = 'Зачинено · відкриємось о ' + today[0] + ':00';
-        } else {
-          var n = nextOpen(t.day);
-          label.textContent = n
-            ? 'Зачинено · відкриємось ' + (n.tomorrow ? 'завтра' : 'у ' + DAYS[n.day]) + ' о ' + n.hour + ':00'
-            : 'Пн–Пт 09:00–18:00 · Сб до 15:00';
-        }
-      }
-    }
-    render();
-    setInterval(render, 60000);
-  })();
-
   /* ===================== toast ===================== */
   var toast = $('#toast'), toastText = $('#toast-text'), toastTimer = null;
   function showToast(msg){
@@ -1499,14 +1389,9 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
       leadSuccess = $('#lead-success'), subjectEl = $('#lead-subject'), lastTrigger = null;
   var FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
 
-  function openLead(subject, trigger, quick){
+  function openLead(subject, trigger){
     lastTrigger = trigger || null;
-    dialog.classList.toggle('is-quick', !!quick);
-    $('#lead-title').textContent = quick ? 'Передзвонимо вам' : 'Запит на консультацію';
-    $('#lead-intro').textContent = quick
-      ? 'Вкажіть номер — зателефонуємо у робочі години й усе розкажемо.'
-      : 'Залиште контакти — інженер зателефонує, уточнить деталі та підтвердить наявність і ціну.';
-    subjectEl.textContent = quick ? 'Зворотний дзвінок' : (subject || 'Загальна консультація');
+    subjectEl.textContent = subject || 'Загальна консультація';
     leadForm.reset();
     leadForm.style.display = '';
     leadSuccess.style.display = 'none';
@@ -1515,7 +1400,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
     document.body.classList.add('is-locked');
     requestAnimationFrame(function(){
       scrim.classList.add('is-open');
-      (quick ? $('#lead-phone') : $('#lead-name')).focus();
+      $('#lead-name').focus();
     });
   }
   function closeLead(){
@@ -1528,9 +1413,6 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 
   $$('[data-lead]').forEach(function(btn){
     btn.addEventListener('click', function(){ openLead(btn.dataset.lead, btn); });
-  });
-  $$('[data-lead-quick]').forEach(function(btn){
-    btn.addEventListener('click', function(){ openLead('Зворотний дзвінок', btn, true); });
   });
   $('#lead-close').addEventListener('click', closeLead);
   $$('[data-close]', scrim).forEach(function(b){ b.addEventListener('click', closeLead); });
@@ -1548,10 +1430,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
 
   leadForm.addEventListener('submit', function(e){
     e.preventDefault();
-    var isQuick = dialog.classList.contains('is-quick');
     var nameEl = $('#lead-name'), phoneEl = $('#lead-phone');
-    var badName = !isQuick && !nameEl.value.trim();
-    var badPhone = !validPhone(phoneEl.value);
+    var badName = !nameEl.value.trim(), badPhone = !validPhone(phoneEl.value);
     setError($('#lf-name'), badName);
     setError($('#lf-phone'), badPhone);
     if(badName){ nameEl.focus(); return; }
@@ -1562,7 +1442,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
       subject: subjectEl.textContent,
       name: nameEl.value.trim(),
       phone: phoneEl.value.trim(),
-      showroom: isQuick ? '' : $('#lead-showroom').value,
+      showroom: $('#lead-showroom').value,
       note: $('#lead-note').value.trim(),
       company: (leadForm.querySelector('[name="company"]') || {}).value || '',
       sentAt: new Date().toISOString()
@@ -1575,8 +1455,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-
     submitLead(payload).then(function(){
       var dl = $('#lead-summary'); dl.textContent = '';
       row(dl, 'Запит', payload.subject);
-      row(dl, 'Контакт', (payload.name ? payload.name + ' · ' : '') + payload.phone);
-      if(payload.showroom) row(dl, 'Шоурум', payload.showroom);
+      row(dl, 'Контакт', payload.name + ' · ' + payload.phone);
+      row(dl, 'Шоурум', payload.showroom);
       leadForm.style.display = 'none';
       leadSuccess.style.display = '';
       showToast('Запит надіслано. Ми зателефонуємо найближчим часом.');

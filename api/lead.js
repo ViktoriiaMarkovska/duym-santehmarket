@@ -31,7 +31,7 @@ function buildMessage(b) {
   } else if (b.subject) {
     lines.push('Тема: <b>' + esc(b.subject) + '</b>');
   }
-  lines.push('Імʼя: <b>' + (clean(b.name) ? esc(b.name) : 'не вказано') + '</b>');
+  lines.push('Імʼя: <b>' + esc(b.name) + '</b>');
   lines.push('Телефон: <b>' + esc(b.phone) + '</b>');
   if (b.showroom) lines.push('Локація: ' + esc(b.showroom));
   if (b.note) lines.push('', 'Коментар: ' + esc(b.note));
@@ -97,8 +97,7 @@ module.exports = async (req, res) => {
     // пастка для ботів: поле приховане, люди його не заповнюють
     return res.status(200).json({ ok: true });
   }
-  // Імʼя необовʼязкове: у формі зворотного дзвінка людина лишає тільки номер.
-  if (!validPhone(body.phone)) {
+  if (!clean(body.name) || !validPhone(body.phone)) {
     return res.status(400).json({ ok: false, error: 'validation' });
   }
 
