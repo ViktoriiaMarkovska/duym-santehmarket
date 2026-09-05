@@ -5,7 +5,7 @@
 
 ## Живі адреси
 
-- Vercel: https://duym-santehmarket.vercel.app
+- Vercel: https://duym.vercel.app (стара адреса https://duym-santehmarket.vercel.app теж працює)
 - GitHub Pages: https://viktoriiamarkovska.github.io/duym-santehmarket/
 
 Обидві оновлюються автоматично при пуші в `main`.
